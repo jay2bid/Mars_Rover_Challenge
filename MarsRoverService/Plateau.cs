@@ -10,6 +10,9 @@ namespace MarsRoverService
         public int maxY;
         public int minX = 0;
         public int minY = 0;
+        public int obstacleX;
+        public int obstacleY;
+        public bool outofgrid;
 
 
         public Plateau(int[] grid)
@@ -21,6 +24,13 @@ namespace MarsRoverService
             
 
         }
-	}
+        public bool IsOutOfGrid(int x, int y)
+        {
+            
+
+            return (x < minX || y < minY || x > maxX || y > maxY);
+        }
+        
+    }
 }
 

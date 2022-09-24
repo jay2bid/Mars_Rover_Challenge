@@ -26,4 +26,10 @@ public class PlateauTest
         _plateau.minX.Should().Be(0);
         _plateau.minY.Should().Be(0);
     }
+    [Test]
+    public void Check_if_Out_Of_Grid()
+    {
+        _plateau.IsOutOfGrid(6, 5).Should().BeTrue();
+    }
+
 }

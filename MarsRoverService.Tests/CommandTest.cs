@@ -6,12 +6,14 @@ public class CommandTest
 {
     private Command _command;
     private Rover _rover;
+    
 
     [SetUp]
     public void Setup()
     {
         _rover = new Rover(1, 2, "N");
         _command = new Command("LMLMLMLMM");
+        
 
     }
     [Test]
@@ -22,6 +24,15 @@ public class CommandTest
        
         
     }
+    [Test]
+    public void Command_should_update_rover_postion_in_plateau()
+    {
+        _command.ExecuteCommand(_rover);
+        _rover.GetRoverPositon().Should().Be("1 3 N");
+
+
+    }
+
 
 }
    
