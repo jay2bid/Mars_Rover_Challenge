@@ -1,2 +1,11 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using MarsRoverService;
+int[] grid = new int[] { 5, 5 };
+Plateau mars = new Plateau(grid);
+Rover nasa = new Rover(1, 2, "N");
+Rover russia = new Rover(3, 3, "E");
+Command first = new Command("LMLMLMLMM");
+first.ExecuteCommand( nasa);
+Command second = new Command("MMRMMRMRRM");
+second.ExecuteCommand(russia);
+Console.WriteLine(russia.GetRoverPositon());
+Console.ReadLine();
