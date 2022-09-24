@@ -1,22 +1,22 @@
 namespace MarsRoverService.Tests;
 using FluentAssertions;
 
-public class RoverTest
+public class CommandTest
 
 {
+    private Command _command;
     private Rover _rover;
 
     [SetUp]
     public void Setup()
     {
-        _rover = new Rover(1,2,"N");
-        
+        _rover = new Rover(1, 2, "N");
+        _command = new Command();
+
 
     }
 
-    [Test]
-    public void Given_rover_cordinates_should_rover_positon()
-    {
-        _rover.GetRoverPositon().Should().Be("1 2 N");
-    }
+    
 }
+   
+ 
