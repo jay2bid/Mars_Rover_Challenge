@@ -1,34 +1,35 @@
-﻿using System;
+using System;
 namespace MarsRoverService
 {
-	public class Rover : IVehicle
-	{
-        public int x;
-        public int y;
+    public class Rover : IVehicle
+    {
+        public int roverPositionX;
+
+        public int roverPositionY;
         public string direction;
         public string roverPosition;
 
         public Rover(int _x, int _y, string _directon)
-		{
+        {
 
-            x = _x;
-            y = _y;
+            roverPositionX = _x;
+            roverPositionY = _y;
             direction = _directon;
-            
+
 
 
         }
         public Rover()
         {
 
-            
+
 
 
         }
         public string GetPositon()
 
         {
-            roverPosition = x + " " + y + " " + direction;
+            roverPosition = roverPositionX + " " + roverPositionY + " " + direction;
             return roverPosition;
         }
 
@@ -74,19 +75,20 @@ namespace MarsRoverService
         }
         public void MoveFoward()
         {
+
             switch (direction)
             {
                 case "N":
-                    y++;
+                    roverPositionY++;
                     break;
                 case "E":
-                    x++;
+                    roverPositionX++;
                     break;
                 case "S":
-                    y--;
+                    roverPositionY--;
                     break;
                 case "W":
-                    x--;
+                    roverPositionX--;
                     break;
 
             }
