@@ -17,7 +17,7 @@ public class RoverTest
     [Test]
     public void Given_rover_cordinates_should_rover_positon()
     {
-        _rover.GetRoverPositon().Should().Be("1 2 N");
+        _rover.GetPositon().Should().Be("1 2 N");
     }
     [Test]
     public void RoverShouldSpinLeft()

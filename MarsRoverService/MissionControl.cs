@@ -5,7 +5,7 @@ namespace MarsRoverService
 	{
 		public int roverpostioningridX;
         public int roverpostiongridY;
-		public Plateau _plateau;
+	
 		public bool obstacle;
 		
 
@@ -19,9 +19,9 @@ namespace MarsRoverService
             roverpostioningridX = rover.x;
 			roverpostiongridY = rover.y;
 		}
-        public bool GridBoundary()
+        public bool CheckUpadtedRoverInGrid(Plateau _plateau)
         {
-			return true;
+			return _plateau.IsOutOfGrid(roverpostioningridX, roverpostiongridY);
         }
 		
 

@@ -20,7 +20,7 @@ public class CommandTest
     public void Moveto1_3_N()
     {
         _command.ExecuteCommand(_rover);
-        _rover.GetRoverPositon().Should().Be("1 3 N");
+        _rover.GetPositon().Should().Be("1 3 N");
        
         
     }
@@ -28,7 +28,7 @@ public class CommandTest
     public void Command_should_update_rover_postion_in_plateau()
     {
         _command.ExecuteCommand(_rover);
-        _rover.GetRoverPositon().Should().Be("1 3 N");
+        _rover.GetPositon().Should().Be("1 3 N");
 
 
     }

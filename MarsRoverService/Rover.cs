@@ -1,7 +1,7 @@
 ﻿using System;
 namespace MarsRoverService
 {
-	public class Rover
+	public class Rover : IVehicle
 	{
         public int x;
         public int y;
@@ -18,7 +18,14 @@ namespace MarsRoverService
 
 
         }
-        public string GetRoverPositon()
+        public Rover()
+        {
+
+            
+
+
+        }
+        public string GetPositon()
 
         {
             roverPosition = x + " " + y + " " + direction;
