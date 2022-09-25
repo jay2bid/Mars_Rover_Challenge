@@ -16,8 +16,8 @@ namespace MarsRoverService
 		}
 		public void UpdateRoverPostion(Rover rover)
 		{
-            roverpostioningridX = rover.x;
-			roverpostiongridY = rover.y;
+            roverpostioningridX = rover.roverPositionX;
+			roverpostiongridY = rover.roverPositionY;
 		}
         public bool CheckUpadtedRoverInGrid(Plateau _plateau)
         {
