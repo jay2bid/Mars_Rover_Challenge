@@ -11,6 +11,10 @@ namespace MarsRoverService
             roverCommand = _roverCommand;
 
         }
+        public Command()
+        {
+
+        }
 
         public void ExecuteCommand(Rover _rover)
         {
@@ -38,7 +42,8 @@ namespace MarsRoverService
 
 
         }
-        
+       
+
 
 
     }

@@ -3,10 +3,15 @@ namespace MarsRoverService
 {
 	public class MissionControl
 	{
-		public int roverpostioningridX;
-        public int roverpostiongridY;
-	
-		public bool obstacle;
+		public int RoverPostionInGridX;
+        public int RoverPostionInGridY;
+		public string RoverDirectionInGrid;
+		Rover roverCheck = new Rover();
+
+
+        public bool obstacle;
+		Command commandCheck = new Command();
+
 		
 
 
@@ -16,14 +21,18 @@ namespace MarsRoverService
 		}
 		public void UpdateRoverPostion(Rover rover)
 		{
-            roverpostioningridX = rover.roverPositionX;
-			roverpostiongridY = rover.roverPositionY;
-		}
-        public bool CheckUpadtedRoverInGrid(Plateau _plateau)
-        {
-			return _plateau.IsOutOfGrid(roverpostioningridX, roverpostiongridY);
+            RoverPostionInGridX = rover.roverPositionX;
+            RoverPostionInGridY = rover.roverPositionY;
+			RoverDirectionInGrid = rover.direction;
+
         }
-		
+        public bool CheckForObstacles(Plateau mars)
+        {
+			return true;
+        }
+
+        
+
 
     }
 }

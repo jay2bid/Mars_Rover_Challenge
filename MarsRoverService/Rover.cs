@@ -22,9 +22,6 @@ namespace MarsRoverService
         public Rover()
         {
 
-
-
-
         }
         public string GetPositon()
 
