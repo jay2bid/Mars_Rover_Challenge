@@ -38,7 +38,7 @@ public class RoverTest
     {
   
         _rover.MoveFoward();
-        _rover.y.Should().Be(3);
+        _rover.roverPositionY.Should().Be(3);
     }
 
 }
